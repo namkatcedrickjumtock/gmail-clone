@@ -4,11 +4,29 @@ import { IconButton } from "@material-ui/core";
 import LabelImportantOutlinedIcon from "@material-ui/icons/LabelImportantOutlined";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { selectMail } from "./features/mailSlice";
 
-function EmailRow({ id, title, subject, description, time }) {
-  const history = useHistory()
+function EmailRow({ to, subject, message, date, time }) {
+  const dispatch = useDispatch();
+  const openMail = () => {
+    dispatch(
+      selectMail(
+        // takes a payload
+        {
+          to,
+          subject,
+          message,
+          date,
+          time,
+        }
+      )
+    );
+    history.push("/mail");
+  };
+  const history = useHistory();
   return (
-    <div className="emailRow" onClick={()=>history.push('/mail')}>
+    <div className="emailRow" onClick={() => openMail()}>
       <div className="emailRow_Options">
         <Checkbox />
         <IconButton>
@@ -18,16 +36,17 @@ function EmailRow({ id, title, subject, description, time }) {
           <StarBorderOutlinedIcon />
         </IconButton>
       </div>
-      <div className="emailRow_title">{title}</div>
+      <div className="emailRow_title">{to}</div>
 
       <div className="emailRow_message">
         <h4>
-          {subject}{" "}
-          <span className="emailRow_description">- {description}</span>
+          {subject}
+          <span className="emailRow_description">- {message}</span>
         </h4>
       </div>
-
-      <p className="emailRow_time">{time}</p>
+      <p className="emailRow_time">
+        {time} {date}
+      </p>
     </div>
   );
 }

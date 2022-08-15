@@ -1,6 +1,8 @@
-.emailList{
-    flex: 1;
-    overflow: scroll;
+.emailList {
+  flex: 1;
+  overflow: scroll;
+  padding-bottom: 20px;
+  padding-left: 40px;
 }
 .EmailList_settings {
   display: flex;
@@ -13,11 +15,21 @@
   z-index: 999;
   padding-right: 10px;
 }
-.emaiList_sections{
+.emaiList_sections {
   position: sticky;
   top: 0;
   display: flex;
   background-color: white;
   border-bottom: 1px solid white;
   z-index: 999;
+}
+
+/* hiding the scroll bar */
+/* for chrome.safari */
+.emailList::-webkit-scrollbar {
+  display: none;
+}
+.emailList {
+  -ms-overflow-style: none; /*IE and Egde*/
+  scrollbar-width: none; /*firefox*/
 }

@@ -1,0 +1,28 @@
+.login {
+  height: 100vh;
+}
+
+.Login_container > img {
+  object-fit: contain; /*keep the aspect ratio*/
+  height: 200px;
+  margin: 10em auto;
+  display: block;
+}
+.Login_container {
+  display: flex;
+  flex-direction: column;
+}
+.Login_container > button {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  margin: 0 auto;
+  color: whitesmoke;
+  cursor: pointer;
+}
+Button:hover {
+  background-color: #0026ffb4 !important;
+  color: #fff !important;
+}

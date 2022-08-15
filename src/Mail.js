@@ -13,9 +13,13 @@ import { useHistory } from "react-router-dom";
 import { UnfoldMoreOutlined } from "@material-ui/icons";
 import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutlined";
 import { ExitToApp } from "@material-ui/icons";
+import { useSelector } from "react-redux";
+import { selectOpenMail } from "./features/mailSlice";
 
 const Mail = () => {
+
   const history = useHistory();
+  const selectedMail =  useSelector(selectOpenMail)
   return (
     <div className="mail">
       <div className="mail_tools">
@@ -62,17 +66,16 @@ const Mail = () => {
           </IconButton>
         </div>
       </div>
-
+      {/* mail body */}
       <div className="mail_body">
         <div className="mail_bodyHeader">
-          <h2>Subject</h2>
+          <h2>{selectedMail?.subject}</h2>
           <LabelImportantOutlinedIcon className="mail_important" />
-          <p>Title</p>
-          <p className='mail_time'>10pm</p>
+          <p>{selectedMail?.to}</p>
+          <p className="mail_date">{selectedMail?.date}</p>
+          <p className="mail_time">{selectedMail?.time}</p>
         </div>
-        <div className='mail_message'>
-          This is the message Body
-        </div>
+        <div className="mail_message">{selectedMail?.message}</div>
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^14.4.2
-  dotenv: ^16.0.1
   firebase: ^9.9.2
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -24,7 +23,6 @@ dependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 14.4.2_znfriv3ismgf3ybh2woqwlpfea
-  dotenv: 16.0.1
   firebase: 9.9.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -4905,11 +4903,6 @@ packages:
   /dotenv/10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
     engines: {node: '>=10'}
-    dev: false
-
-  /dotenv/16.0.1:
-    resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
-    engines: {node: '>=12'}
     dev: false
 
   /duplexer/0.1.2:

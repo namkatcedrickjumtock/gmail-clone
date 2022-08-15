@@ -1,7 +1,6 @@
 import { Button,IconButton } from "@material-ui/core";
 import "./sidebar.css";
 import AddIcon from "@material-ui/icons/Add";
-import { Inbox } from "@material-ui/icons";
 import SideBarOptions from "./SideBarOptions";
 import InboxIcon from "@material-ui/icons/Inbox";
 import StarIcon from "@material-ui/icons/Star";
@@ -38,7 +37,7 @@ const SideBar = () => {
       />
       <SideBarOptions Icon={StarIcon} title="Starred" number={54} />
       <SideBarOptions Icon={AccessTime} title="Snoozed" number={54} />
-      <SideBarOptions Icon={LabelImportant} title="Important" number={54} />
+      <SideBarOptions Icon={LabelImportant} title="Important"/>
       <SideBarOptions Icon={NearMeSharp} title="Sent" number={54} />
       <SideBarOptions Icon={NoteIcon} title="Drafts" number={54} />
       <SideBarOptions Icon={ExpandMoreRounded} title="More" number={54} />
